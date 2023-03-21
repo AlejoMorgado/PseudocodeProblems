@@ -1,20 +1,19 @@
-lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];   // una lista de números
-lista = reemplazarImparPorPar(lista);
-function reemplazarImparPorPar(lista) {
-  for (let i = 0; i < lista[i]; i++) {
-    let num = lista[i];
-    if (num % 2 !== 0) {  // verifica si el número es impar
-      let nuevoNum = generarNumeroParAleatorio();  // genera un número par aleatorio
-      lista[i] = nuevoNum;  // reemplaza el número impar con el número par aleatorio
+let list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];   //list of numbers
+replaceOddByEven(list);
+function replaceOddByEven(list) {
+  for (let i = 0; i < list[i]; i++) {
+    let number = list[i];
+    if (number % 2 !== 0) {  // Check if the number is odd
+      let newNumber = pairNumber();
+      list[i] = newNumber;  // replace the odd number with the random even number
     }
   }
-  return lista;
+  return list;
 }
-function generarNumeroParAleatorio() {
-  let num2 = 6;  // genera un número aleatorio entre 1 y 100
-  if (num2 % 2 === 0) {   // verifica si el número es par
-    return num2;
+function pairNumber() {
+  let numberRandom = 14; 
+  if (numberRandom % 2 === 0) {   // check if the number is even
+    return numberRandom;
   }
 }
-// Ejemplo de uso
-console.log(lista);   // devuelve la lista con los números impares reemplazados por números pares aleatorios
+console.log(list);   // returns the list with the odd numbers replaced by random even numbers
